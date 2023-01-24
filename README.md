@@ -6,12 +6,14 @@ This is the homepage for work PHONEix.
 
 ## Table of Contents
 
-* [PHONEix](#phoneix)
-* [Codes for PHONEix](#codes-for-phoneix)
-  * [Installation](#installation)
-  * [How to run](#how-to-run)
-  * [Evaluation](#evaluation)
-* [Audio Examples](#audio-examples)
+ * [Codes for PHONEix](#codes-for-phoneix)
+   * [Installation](#installation)
+   * [How to run](#how-to-run)
+   * [Evaluation](#evaluation)
+ * [Codes for baselines](#codes-for-baselines)
+   * [Type1](#type1)
+   * [Type2](#type2) 
+ * [Audio Examples](#audio-examples)
 
 ## Codes for PHONEix
 
@@ -109,6 +111,21 @@ Therefore, we recommend performing the subjective evaluation (eg. MOS) if you wa
 
 You can refer [this page](https://github.com/kan-bayashi/webMUSHRA/blob/master/HOW_TO_SETUP.md) to launch web-based subjective evaluation system with [webMUSHRA](https://github.com/audiolabs/webMUSHRA).
 
+## Codes for PHONEix
+
+### Type1
+
+We follow the processing pipelines in [Xiaoice](https://arxiv.org/pdf/2006.06261). It accepts score features at note level and expands frame lengths according to the phoneme duration produced by HMM-based forced-alignment.
+
+The codes is in the same repositories as PHONEix, under https://github.com/A-Quarter-Mile/espnet/tree/alf. To run the model with Type1 strategy, you need to set the `--train_config train_naive_rnn_dp.yaml` for [LSTM-based model](https://arxiv.org/abs/2010.12024) and `--train_config train_xiaoice.yaml` for [Transformer-based model](https://arxiv.org/pdf/2006.06261). The other operations are the same as [Codes for PHONEix](#codes-for-phoneix)
+
+### Type2
+
+Type2 use the annotated phoneme time sequence as acoustic encoder input and length expansion ground truth for the length regulator. We analyze the acoustic feature follow [this work](https://arxiv.org/abs/2010.12024).
+
+Codes can be found in [Muskit](https://github.com/A-Quarter-Mile/Muskits). Muskit follows ESPnet and Kaldi style data processing. The main structure and base codes are adapted from ESPnet. The [Installation](https://github.com/SJTMusicTeam/Muskits/wiki/Installation-Instructions) and [running instructions](https://github.com/SJTMusicTeam/Muskits/blob/main/doc/tutorial.md) are provided in Muskit.
+
+To run the model with Type2 strategy in Muskit, you need to set the `--train_config train_naive_rnn_dp.yaml` for [LSTM-based model](https://arxiv.org/abs/2010.12024) and `--train_config train_xiaoice.yaml` for [Transformer-based model](https://arxiv.org/pdf/2006.06261). The other operations are the same as [Codes for PHONEix](#codes-for-phoneix)
 
 ## Audio Examples
 
