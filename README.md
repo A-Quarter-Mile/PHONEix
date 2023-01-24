@@ -86,30 +86,29 @@ We have merged Muskits with ESPnet and the details of implementation can be foun
     
 ### Evaluation
 
-    We provide three objective evaluation metrics:
+  We provide three objective evaluation metrics:
 
-    - Mel-cepstral distortion (MCD)
-    - Voiced / unvoiced error rate (VUV_E)
-    - Logarithmic rooted mean square error of the fundamental frequency (F![1](http://latex.codecogs.com/svg.latex?_0)RMSE). 
+- Mel-cepstral distortion (MCD)
+- Voiced / unvoiced error rate (VUV_E)
+- Logarithmic rooted mean square error of the fundamental frequency (F![1](http://latex.codecogs.com/svg.latex?_0)RMSE). 
 
-    We apply dynamic time-warping (DTW) to match the length difference between ground-truth singing and generated singing.
+We apply dynamic time-warping (DTW) to match the length difference between ground-truth singing and generated singing.
 
-    Here we show the example command to calculate objective metrics:
+Here we show the example command to calculate objective metrics:
 
-    ```sh
-    cd egs2/<recipe_name>/svs1
-    . ./path.sh
-    # Evaluate MCD
-    ./pyscripts/utils/evaluate_mcd.py \
-        exp/<model_dir_name>/<decode_dir_name>/eval/wav/wav.scp \
-        dump/raw/eval/wav.scp
-    ```
-    While these objective metrics can estimate the quality of synthesized singing, it is still difficult to fully determine human perceptual quality from these values, especially with high-fidelity generated singing.
-    Therefore, we recommend performing the subjective evaluation (eg. MOS) if you want to check perceptual quality in detail.
+```sh
+cd egs2/<recipe_name>/svs1
+. ./path.sh
+# Evaluate MCD
+./pyscripts/utils/evaluate_mcd.py \
+    exp/<model_dir_name>/<decode_dir_name>/eval/wav/wav.scp \
+    dump/raw/eval/wav.scp
+```
+While these objective metrics can estimate the quality of synthesized singing, it is still difficult to fully determine human perceptual quality from these values, especially with high-fidelity generated singing.
+Therefore, we recommend performing the subjective evaluation (eg. MOS) if you want to check perceptual quality in detail.
 
-    You can refer [this page](https://github.com/kan-bayashi/webMUSHRA/blob/master/HOW_TO_SETUP.md) to launch web-based subjective evaluation system with [webMUSHRA](https://github.com/audiolabs/webMUSHRA).
+You can refer [this page](https://github.com/kan-bayashi/webMUSHRA/blob/master/HOW_TO_SETUP.md) to launch web-based subjective evaluation system with [webMUSHRA](https://github.com/audiolabs/webMUSHRA).
 
 
 ## Audio Examples
-
 
