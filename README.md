@@ -112,3 +112,12 @@ You can refer [this page](https://github.com/kan-bayashi/webMUSHRA/blob/master/H
 
 ## Audio Examples
 
+It shows the comparison of the proposed acoustic processing strategy, PHONEix, with baselines (i.e., Type 1 and Type 2). It is evaluated with Bi-LSTM or Transformer based encoder-decoder structures on Ofuton and Opencpop.
+
+- [Audio examples in Ofuton](https://github.com/A-Quarter-Mile/PHONEix/tree/main/Examples/Ofuton)
+- [Audio examples in Opencpop](https://github.com/A-Quarter-Mile/PHONEix/tree/main/Examples/Opencpop)
+
+```sh
+eg1_model_strategy.wav
+# e.g. eg1_LSTM_PHONEix.wav in Example/Ofuton is the result for LSTM-based model with PHONEix strategy in Ofuton dataset.
+```
