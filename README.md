@@ -118,6 +118,6 @@ It shows the comparison of the proposed acoustic processing strategy, PHONEix, w
 - [Audio examples in Opencpop](https://github.com/A-Quarter-Mile/PHONEix/tree/main/Examples/Opencpop)
 
 ```sh
-eg1_model_strategy.wav
-# e.g. eg1_LSTM_PHONEix.wav in Example/Ofuton is the result for LSTM-based model with PHONEix strategy in Ofuton dataset.
+Examples/dataset/model_strategy/*.wav
+# e.g. Examples/Ofuton/LSTM_PHONEix/1.wav is the result for LSTM-based model with PHONEix strategy in Ofuton dataset.
 ```
