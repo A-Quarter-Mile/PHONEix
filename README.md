@@ -2,7 +2,7 @@
 
 This is the homepage for work PHONEix.
 
-《PHONEix: Acoustic Feature Processing Strategy for Enhanced Singing Pronunciation with Phoneme Distribution Predictor》(Submit to ICASSP 2022) Paper will be released soon.
+《PHONEix: Acoustic Feature Processing Strategy for Enhanced Singing Pronunciation with Phoneme Distribution Predictor》(Submit to ICASSP 2023) Paper will be released soon.
 
 ## Table of Contents
 
